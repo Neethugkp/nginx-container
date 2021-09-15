@@ -63,7 +63,8 @@ COPY ./s2i/bin/ $STI_SCRIPTS_PATH
 
 # Copy extra files to the image.
 COPY ./root/ /
-COPY ./nginx.conf /
+RUN rm /etc/nginx/nginx.conf
+COPY nginx.conf /etc/nginx/nginx.conf
 
 # In order to drop the root user, we have to make some directories world
 # writeable as OpenShift default security model is to run the container under
