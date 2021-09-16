@@ -5,7 +5,7 @@ FROM quay.io/centos7/s2i-core-centos7
 # Volumes:
 #  * /var/opt/rh/rh-nginx116/log/nginx/ - Storage for logs
 
-EXPOSE 8080
+EXPOSE 8081
 EXPOSE 8443
 
 ENV NAME=nginx \
